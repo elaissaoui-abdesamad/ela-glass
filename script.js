@@ -89,7 +89,7 @@
         showStatus('Demande envoyée. Nous vous répondons sous 24h.', false);
       })
       .catch(function () {
-        showStatus('L\'envoi a échoué. Contactez-nous directement sur WhatsApp au +33 6 25 28 70 70.', true);
+        showStatus('Erreur d\'envoi. Contactez-nous directement sur WhatsApp.', true);
       })
       .finally(function () {
         if (btn) { btn.disabled = false; btn.textContent = original; }
