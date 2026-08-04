@@ -1,4 +1,7 @@
 /* ELA GLASS — NOIR & OR (sombre & luxe) */
+@font-face{font-family:'Fraunces';src:url('/assets/fonts/fraunces-normal.woff2') format('woff2');font-weight:300 600;font-style:normal;font-display:optional}
+@font-face{font-family:'Fraunces';src:url('/assets/fonts/fraunces-italic.woff2') format('woff2');font-weight:400 500;font-style:italic;font-display:optional}
+@font-face{font-family:'Inter';src:url('/assets/fonts/inter.woff2') format('woff2');font-weight:300 700;font-style:normal;font-display:swap}
 :root{
   --noir:#0A0A0C;--noir-2:#0E0E12;--noir-3:#060607;--surface:#141419;--surface-2:#1B1B22;
   --ivory:#ECEAE3;--muted:#9C978B;--muted-2:#726E66;
