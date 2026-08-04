@@ -1,4 +1,7 @@
 /* ELA GLASS — NOIR & OR (sombre & luxe) */
+@font-face{font-family:'Fraunces';src:url('/assets/fonts/fraunces-normal.woff2') format('woff2');font-weight:300 600;font-style:normal;font-display:optional}
+@font-face{font-family:'Fraunces';src:url('/assets/fonts/fraunces-italic.woff2') format('woff2');font-weight:400 500;font-style:italic;font-display:optional}
+@font-face{font-family:'Inter';src:url('/assets/fonts/inter.woff2') format('woff2');font-weight:300 700;font-style:normal;font-display:swap}
 :root{
   --noir:#0A0A0C;--noir-2:#0E0E12;--noir-3:#060607;--surface:#141419;--surface-2:#1B1B22;
   --ivory:#ECEAE3;--muted:#9C978B;--muted-2:#726E66;
@@ -49,7 +52,7 @@ button{font-family:inherit;}
 .burger.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
 .burger.active span:nth-child(2){opacity:0;}
 .burger.active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding-bottom:110px;background:linear-gradient(180deg,rgba(10,10,12,.5) 0%,rgba(10,10,12,.58) 42%,rgba(10,10,12,.97) 100%),url('assets/images/hero-douche.jpg') center/cover no-repeat;}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding-bottom:110px;background:linear-gradient(180deg,rgba(10,10,12,.5) 0%,rgba(10,10,12,.58) 42%,rgba(10,10,12,.97) 100%),url('assets/images/hero-douche.webp') center/cover no-repeat;}
 .hero-inner{max-width:var(--maxw);margin:0 auto;padding:0 32px;width:100%;}
 .hero-tag{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:24px;display:flex;align-items:center;gap:14px;}
 .hero-tag::before{content:'';width:40px;height:1px;background:var(--gold);}
