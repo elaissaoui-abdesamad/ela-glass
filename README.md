@@ -6,12 +6,12 @@ Site statique (HTML/CSS/JS purs), hébergé sur **GitHub Pages**. Aucune compila
 ## Pages
 - `index.html` — accueil (services, tarifs, réalisations, processus, FAQ, zone, contact)
 - `paroi-douche-temara.html` / `-rabat.html` / `-sale.html` / `-bouznika.html` — pages villes (SEO local)
-- `sitemap.xml` · `robots.txt` · `CNAME` (ela-glass.ma)
+- `sitemap.xml` · `robots.txt` · `CNAME` (elaglass.ma)
 
 ## Mise en ligne (GitHub Pages)
 1. Créer un repo, y pousser **tout ce dossier** (sans les fichiers `build*.py`).
 2. Repo → Settings → Pages → Source = branche `main`, dossier `/root`.
-3. Custom domain : `ela-glass.ma` (le fichier `CNAME` est déjà là).
+3. Custom domain : `elaglass.ma` (le fichier `CNAME` est déjà là).
 4. Cocher **Enforce HTTPS** une fois le certificat émis.
 
 ## DNS chez le registrar (.ma)

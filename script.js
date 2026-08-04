@@ -62,41 +62,6 @@
     window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
   });
 
-  /* ---- Formulaire (Netlify Forms) ---- */
-  var form = document.getElementById('contactForm');
-  var status = document.getElementById('formStatus');
-  function showStatus(msg, err) {
-    if (!status) return;
-    status.textContent = msg;
-    status.classList.add('show');
-    status.classList.toggle('error', !!err);
-  }
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var btn = form.querySelector('button[type="submit"]');
-      var original = btn ? btn.textContent : '';
-      if (btn) { btn.disabled = true; btn.textContent = 'Envoi en cours...'; }
-      var data = new FormData(form);
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
-      })
-      .then(function (res) {
-        if (!res.ok) throw new Error('fail');
-        form.reset();
-        showStatus('Demande envoyée. Nous vous répondons sous 24h.', false);
-      })
-      .catch(function () {
-        showStatus('Erreur d\'envoi. Contactez-nous directement sur WhatsApp.', true);
-      })
-      .finally(function () {
-        if (btn) { btn.disabled = false; btn.textContent = original; }
-      });
-    });
-  }
-
   /* ---- Année ---- */
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
