@@ -207,3 +207,21 @@ a.footer-link:hover{color:var(--gold-light);}
 .social-links{display:flex;gap:18px;justify-content:center;margin-top:18px}
 .social-links a{color:inherit;opacity:.85;transition:opacity .2s,transform .2s;display:inline-flex}
 .social-links a:hover{opacity:1;transform:translateY(-2px)}
+
+/* ===== Nav mobile — refonte panneau (2026-08-05) ===== */
+@media(max-width:900px){
+  .nav-links{justify-content:flex-start;padding:104px 40px 40px;gap:0;
+    width:86%;max-width:360px;z-index:1090;}
+  .nav-links li{width:100%;}
+  .nav-links li + li{border-top:1px solid var(--gold-line);}
+  .nav-links a{display:block;width:100%;padding:20px 0;font-size:21px;
+    letter-spacing:.02em;}
+  .nav-links .nav-cta{margin-top:auto;border-top:0;padding-top:28px;}
+  .nav-links .nav-cta a{display:flex;align-items:center;justify-content:center;
+    padding:16px 18px;border:1px solid var(--gold-line);border-radius:4px;
+    font-size:16px;letter-spacing:.04em;}
+  .nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;
+    visibility:hidden;transition:opacity .4s var(--ease);z-index:1050;}
+  .nav-overlay.open{opacity:1;visibility:visible;}
+  body.menu-open{overflow:hidden;}
+}
