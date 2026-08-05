@@ -204,10 +204,6 @@ a.footer-link:hover{color:var(--gold-light);}
 .price{font-family:'Fraunces',serif;font-size:26px;color:var(--gold-light);margin:2px 0 12px;line-height:1.1;}
 .price strong{font-weight:600;color:var(--gold-light);}
 .price span{font-family:'Inter',sans-serif;font-size:14px;color:var(--muted);font-weight:500;}
-.social-links{display:flex;gap:18px;justify-content:center;margin-top:18px}
-.social-links a{color:inherit;opacity:.85;transition:opacity .2s,transform .2s;display:inline-flex}
-.social-links a:hover{opacity:1;transform:translateY(-2px)}
-
 /* ===== Nav mobile — refonte panneau (2026-08-05) ===== */
 @media(max-width:900px){
   .nav-links{justify-content:flex-start;padding:104px 40px 40px;gap:0;
@@ -225,3 +221,17 @@ a.footer-link:hover{color:var(--gold-light);}
   .nav-overlay.open{opacity:1;visibility:visible;}
   body.menu-open{overflow:hidden;}
 }
+
+/* ===== Footer — réseaux sociaux (2026-08-05) ===== */
+.social{margin-top:34px}
+.social .social-label{display:block;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.social .social-row{display:flex;gap:14px}
+.social .social-row a{display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border:1px solid var(--gold-line);border-radius:50%;
+  color:var(--ivory);opacity:.7;
+  transition:color .3s var(--ease),border-color .3s var(--ease),
+             opacity .3s var(--ease),transform .3s var(--ease)}
+.social .social-row a:hover,.social .social-row a:focus-visible{color:var(--gold);
+  border-color:var(--gold);opacity:1;transform:translateY(-3px)}
+@media(max-width:560px){.social{margin-top:28px}}
