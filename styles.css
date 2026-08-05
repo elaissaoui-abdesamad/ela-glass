@@ -204,3 +204,6 @@ a.footer-link:hover{color:var(--gold-light);}
 .price{font-family:'Fraunces',serif;font-size:26px;color:var(--gold-light);margin:2px 0 12px;line-height:1.1;}
 .price strong{font-weight:600;color:var(--gold-light);}
 .price span{font-family:'Inter',sans-serif;font-size:14px;color:var(--muted);font-weight:500;}
+.social-links{display:flex;gap:18px;justify-content:center;margin-top:18px}
+.social-links a{color:inherit;opacity:.85;transition:opacity .2s,transform .2s;display:inline-flex}
+.social-links a:hover{opacity:1;transform:translateY(-2px)}
