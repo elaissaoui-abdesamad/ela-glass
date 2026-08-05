@@ -1,6 +1,6 @@
 # ELA Glass — site vitrine
 
-Parois de douche, garde-corps en verre et miroiterie sur mesure — Témara, Rabat, Bouznika, Salé.
+Parois de douche et garde-corps en verre sur mesure — Témara, Rabat, Bouznika, Salé.
 Site statique (HTML/CSS/JS purs), hébergé sur **GitHub Pages**. Aucune compilation, aucun npm.
 
 ## Pages
@@ -27,7 +27,7 @@ Site statique (HTML/CSS/JS purs), hébergé sur **GitHub Pages**. Aucune compila
 | Haute | **Photo réelle de garde-corps** → remplacer `assets/images/paroi-fixe-transparente-beige.jpg` dans le bloc garde-corps (visuel provisoire) |
 | Haute | **Google Business Profile** (canal n°1 en local) |
 | Moyenne | Liens **Instagram / Facebook** (actuellement `href="#"`) |
-| Basse | Ajuster les prix d'appel si besoin (douche 1 200 DH/m², garde-corps 1 500 DH/ml, miroir 600 DH/m²) |
+| Basse | Ajuster les prix d'appel si besoin (douche 1 200 DH/m², garde-corps 1 500 DH/ml) |
 
 ## Prix d'appel (indicatifs)
-Douche 1 200 DH/m² · Garde-corps 1 500 DH/ml · Miroir 600 DH/m². Estimation exacte après mesure gratuite.
+Douche 1 200 DH/m² · Garde-corps 1 500 DH/ml. Estimation exacte après mesure gratuite.
