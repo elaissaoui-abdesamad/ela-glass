@@ -111,22 +111,4 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  /* ---- Barre CTA mobile : masquer si un bouton WhatsApp est visible ---- */
-  var mcta=document.querySelector('.mobile-cta');
-  if(mcta&&'IntersectionObserver' in window){
-    var ctas=[].slice.call(document.querySelectorAll('a[href*="wa.me/"]'))
-                .filter(function(a){return a!==mcta&&!a.classList.contains('wa-float');});
-    var hero=document.querySelector('.hero');
-    if(hero){ctas.push(hero);}
-    var visibles=0;
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){visibles+=e.isIntersecting?1:-1;});
-      if(visibles<0){visibles=0;}
-      mcta.classList.toggle('is-hidden',visibles>0);
-    },{threshold:0.2});
-    ctas.forEach(function(el){io.observe(el);});
-    mcta.classList.add('is-hidden');
-    requestAnimationFrame(function(){mcta.classList.add('is-ready');});
-  }
-
 })();
