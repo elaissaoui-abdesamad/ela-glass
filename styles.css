@@ -235,3 +235,15 @@ a.footer-link:hover{color:var(--gold-light);}
 .social .social-row a:hover,.social .social-row a:focus-visible{color:var(--gold);
   border-color:var(--gold);opacity:1;transform:translateY(-3px)}
 @media(max-width:560px){.social{margin-top:28px}}
+
+.mobile-cta{display:none;}
+@media(max-width:900px){
+  .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:950;
+    align-items:center;justify-content:center;gap:10px;
+    background:#25D366;color:#08240F;font-weight:600;font-size:14px;
+    letter-spacing:.03em;text-transform:uppercase;
+    min-height:56px;padding:16px 20px calc(16px + env(safe-area-inset-bottom));
+    box-shadow:0 -6px 24px rgba(0,0,0,.45);transition:transform .3s var(--ease);}
+  .wa-float{display:none;}
+  body{padding-bottom:76px;}
+}

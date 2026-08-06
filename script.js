@@ -63,6 +63,12 @@
     });
   }
 
+  /* ---- Barre CTA mobile : masquer sur #contact ---- */
+  var mcta=document.querySelector('.mobile-cta'), contact=document.getElementById('contact');
+  if(mcta&&contact&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(e){mcta.style.transform=e[0].isIntersecting?'translateY(110%)':'';},{threshold:0.25}).observe(contact);
+  }
+
   /* ---- Retour en haut ---- */
   if (toTop) toTop.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
