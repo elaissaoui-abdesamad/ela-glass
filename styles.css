@@ -253,3 +253,11 @@ a.footer-link:hover{color:var(--gold-light);}
 @media(max-width:900px){
   .hero{padding-top:120px;}
 }
+
+@media(max-width:900px){
+  .hero{padding-top:130px;}
+  .hero-tag{display:none;}
+  .hero h1{font-size:clamp(32px,8.5vw,44px);margin-bottom:20px;}
+  .hero-lede{font-size:15.5px;line-height:1.55;margin-bottom:32px;max-width:34ch;}
+  .hero-actions{gap:12px;}
+}
