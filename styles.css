@@ -261,3 +261,14 @@ a.footer-link:hover{color:var(--gold-light);}
   .hero-lede{font-size:15.5px;line-height:1.55;margin-bottom:32px;max-width:34ch;}
   .hero-actions{gap:12px;}
 }
+
+@media(max-width:900px){
+  .mobile-cta{background:rgba(14,14,18,.94);color:var(--ivory);
+    border-top:1px solid var(--gold-line);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    box-shadow:0 -4px 20px rgba(0,0,0,.5);
+    min-height:48px;font-size:12px;letter-spacing:.06em;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));}
+  .mobile-cta svg{color:#25D366;}
+  body{padding-bottom:64px;}
+}
