@@ -74,6 +74,45 @@
     window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
   });
 
+
+  /* ---- Lightbox galerie ---- */
+  (function () {
+    var items = document.querySelectorAll('.masonry .item');
+    if (!items.length) return;
+    var lb = null, lbImg = null;
+    function build() {
+      lb = document.createElement('dialog');
+      lb.id = 'lb';
+      lb.innerHTML = '<button type="button" class="lb-close" aria-label="Fermer">\u00D7</button><img alt="">';
+      lbImg = lb.querySelector('img');
+      document.body.appendChild(lb);
+      lb.addEventListener('click', function (e) {
+        if (e.target === lb || e.target.classList.contains('lb-close')) close();
+      });
+    }
+    function open(src, alt) {
+      if (!lb) build();
+      lbImg.src = src; lbImg.alt = alt || '';
+      if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open', '');
+    }
+    function close() {
+      if (!lb) return;
+      if (typeof lb.close === 'function') lb.close(); else lb.removeAttribute('open');
+      lbImg.src = '';
+    }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    items.forEach(function (it) {
+      it.setAttribute('tabindex', '0');
+      it.setAttribute('role', 'button');
+      var img = it.querySelector('img');
+      function trigger() { if (img) open(img.currentSrc || img.src, img.alt); }
+      it.addEventListener('click', trigger);
+      it.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); }
+      });
+    });
+  })();
+
   /* ---- Année ---- */
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
