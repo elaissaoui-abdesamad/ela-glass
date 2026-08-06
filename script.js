@@ -63,18 +63,6 @@
     });
   }
 
-  /* ---- Barre CTA mobile : masquer sur le hero ou #contact ---- */
-  var mcta=document.querySelector('.mobile-cta');
-  var hero=document.querySelector('.hero');
-  var contact=document.getElementById('contact');
-  if(mcta&&'IntersectionObserver' in window){
-    var vis={hero:false,contact:false};
-    var sync=function(){mcta.style.transform=(vis.hero||vis.contact)?'translateY(110%)':'';};
-    if(hero){new IntersectionObserver(function(e){vis.hero=e[0].isIntersecting;sync();},{threshold:0.35}).observe(hero);}
-    if(contact){new IntersectionObserver(function(e){vis.contact=e[0].isIntersecting;sync();},{threshold:0.25}).observe(contact);}
-    sync();
-  }
-
   /* ---- Retour en haut ---- */
   if (toTop) toTop.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
@@ -122,4 +110,23 @@
   /* ---- Année ---- */
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
+
+  /* ---- Barre CTA mobile : masquer si un bouton WhatsApp est visible ---- */
+  var mcta=document.querySelector('.mobile-cta');
+  if(mcta&&'IntersectionObserver' in window){
+    var ctas=[].slice.call(document.querySelectorAll('a[href*="wa.me/"]'))
+                .filter(function(a){return a!==mcta&&!a.classList.contains('wa-float');});
+    var hero=document.querySelector('.hero');
+    if(hero){ctas.push(hero);}
+    var visibles=0;
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){visibles+=e.isIntersecting?1:-1;});
+      if(visibles<0){visibles=0;}
+      mcta.classList.toggle('is-hidden',visibles>0);
+    },{threshold:0.2});
+    ctas.forEach(function(el){io.observe(el);});
+    mcta.classList.add('is-hidden');
+    requestAnimationFrame(function(){mcta.classList.add('is-ready');});
+  }
+
 })();

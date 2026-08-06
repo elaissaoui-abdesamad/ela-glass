@@ -223,6 +223,13 @@ a.footer-link:hover{color:var(--gold-light);}
     box-shadow:0 -6px 24px rgba(0,0,0,.45);transition:transform .3s var(--ease);}
   .wa-float{display:none;}
   body{padding-bottom:76px;}
+  .mobile-cta{opacity:1;transform:translateY(0);
+    transition:opacity .28s var(--ease),transform .28s var(--ease);}
+  .mobile-cta.is-hidden{opacity:0;transform:translateY(100%);pointer-events:none;}
+  .mobile-cta:not(.is-ready){transition:none;}
+  @media(prefers-reduced-motion:reduce){
+    .mobile-cta{transition:none;}
+  }
 }
 
 @media(max-width:900px){
