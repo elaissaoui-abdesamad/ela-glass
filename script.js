@@ -63,10 +63,16 @@
     });
   }
 
-  /* ---- Barre CTA mobile : masquer sur #contact ---- */
-  var mcta=document.querySelector('.mobile-cta'), contact=document.getElementById('contact');
-  if(mcta&&contact&&'IntersectionObserver' in window){
-    new IntersectionObserver(function(e){mcta.style.transform=e[0].isIntersecting?'translateY(110%)':'';},{threshold:0.25}).observe(contact);
+  /* ---- Barre CTA mobile : masquer sur le hero ou #contact ---- */
+  var mcta=document.querySelector('.mobile-cta');
+  var hero=document.querySelector('.hero');
+  var contact=document.getElementById('contact');
+  if(mcta&&'IntersectionObserver' in window){
+    var vis={hero:false,contact:false};
+    var sync=function(){mcta.style.transform=(vis.hero||vis.contact)?'translateY(110%)':'';};
+    if(hero){new IntersectionObserver(function(e){vis.hero=e[0].isIntersecting;sync();},{threshold:0.35}).observe(hero);}
+    if(contact){new IntersectionObserver(function(e){vis.contact=e[0].isIntersecting;sync();},{threshold:0.25}).observe(contact);}
+    sync();
   }
 
   /* ---- Retour en haut ---- */
