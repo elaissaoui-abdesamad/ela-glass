@@ -19,7 +19,7 @@ Site statique (HTML/CSS/JS purs), hébergé sur **GitHub Pages**. Aucune compila
 - 1 **CNAME** `www` → `<user>.github.io`
 
 ## Contact
-- WhatsApp / tél : **+33 6 25 28 70 70** (`wa.me/33625287070`) — CTA principal, pas de formulaire.
+- WhatsApp / tél : **+33 6 25 28 70 70** (`wa.me/212720889310`) — CTA principal, pas de formulaire.
 
 ## À faire avant / après mise en ligne
 | Priorité | Quoi |
