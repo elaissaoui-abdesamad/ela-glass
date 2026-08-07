@@ -584,5 +584,27 @@
 </button>
 
 <script src="script.js" defer></script>
+<!-- Google Analytics 4 (chargement differe pour ne pas degrader les performances) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5GYW4J0R35');
+  (function(){
+    var loaded = false;
+    function loadGA4(){
+      if (loaded) return;
+      loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5GYW4J0R35';
+      document.head.appendChild(s);
+    }
+    var evts = ['scroll','mousemove','touchstart','keydown','click'];
+    evts.forEach(function(e){ window.addEventListener(e, loadGA4, { once: true, passive: true }); });
+    if (document.readyState === 'complete') { setTimeout(loadGA4, 3000); }
+    else { window.addEventListener('load', function(){ setTimeout(loadGA4, 3000); }); }
+  })();
+</script>
 </body>
 </html>
