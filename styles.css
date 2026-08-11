@@ -183,21 +183,59 @@ a.footer-link:hover{color:var(--gold-light);}
 .price span{font-family:'Inter',sans-serif;font-size:14px;color:var(--muted);font-weight:500;}
 /* ===== Nav mobile — refonte panneau (2026-08-05) ===== */
 @media(max-width:900px){
-  .nav-links{justify-content:flex-start;padding:104px 40px 40px;gap:0;
-    width:86%;max-width:360px;z-index:1090;}
-  .nav-links li{width:100%;}
-  .nav-links li + li{border-top:1px solid var(--gold-line);}
-  .nav-links a{display:block;width:100%;padding:20px 0;font-size:21px;
-    letter-spacing:.02em;}
-  .nav-links .nav-cta{margin-top:auto;border-top:0;padding-top:28px;}
-  .nav-links .nav-cta a{display:flex;align-items:center;justify-content:center;
-    padding:16px 18px;border:1px solid var(--gold-line);border-radius:4px;
-    font-size:16px;letter-spacing:.04em;}
   .nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;
     visibility:hidden;transition:opacity .4s var(--ease);z-index:1050;}
   .nav-overlay.open{opacity:1;visibility:visible;}
   body.menu-open{overflow:hidden;}
 }
+/* Nav mobile — refonte panneau v2 (2026-08-11) */
+@media (max-width: 900px){
+  .nav-links{
+    top: 0; right: 0; bottom: 0;
+    width: min(86vw, 400px);
+    height: 100dvh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0;
+    margin: 0;
+    padding: 78px 26px calc(28px + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    z-index: 1090;
+  }
+  .nav-links li{ flex: 0 0 100%; border: 0; margin: 0; }
+  .nav-links a{
+    display: block;
+    padding: 13px 0;
+    font-size: 17px;
+    line-height: 1.25;
+    text-decoration: none;
+  }
+  .nav-links .nav-home a{ font-size: 18px; padding-bottom: 16px; }
+  .nav-links .nav-label{
+    margin: 22px 0 4px;
+    padding-bottom: 8px;
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    opacity: .8;
+    border-bottom: 1px solid var(--gold-line);
+  }
+  .nav-links .nav-city,
+  .nav-links .nav-sec{ flex: 0 0 50%; }
+  .nav-links .nav-city a,
+  .nav-links .nav-sec a{ padding: 9px 0; font-size: 15px; }
+  .nav-overlay{ background: rgba(0,0,0,.65); backdrop-filter: blur(2px); }
+}
+@media (min-width: 901px){
+  .nav-links .nav-label,
+  .nav-links .nav-city,
+  .nav-links .nav-home,
+  .nav-links .nav-lite{ display: none; }
+}
+body.menu-open .wa-float{ z-index: 1091; }
 
 /* ===== Footer — réseaux sociaux (2026-08-05) ===== */
 .social{margin-top:34px}
