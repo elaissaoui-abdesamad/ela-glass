@@ -2,8 +2,8 @@
   "name": "Elaglass",
   "short_name": "Elaglass",
   "icons": [
-    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+    { "src": "/icon-192.png?v=20260814", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png?v=20260814", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
   ],
   "theme_color": "#0A0A0C",
   "background_color": "#0A0A0C",
